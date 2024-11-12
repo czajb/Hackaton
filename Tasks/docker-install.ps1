@@ -9,6 +9,11 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # Settings
 $dockerInstallerUrl = "https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe"
 $installerPath = "$env:TEMP\DockerDesktopInstaller.exe"
+
+# WhoamItest
+$desktopPath = [System.Environment]::GetFolderPath('Desktop')
+$whoamiOutput = whoami
+$whoamiOutput | Out-File -FilePath "$desktopPath\whoami.txt"
  
 # Download Docker Desktop installer
 Write-Host "Downloading Docker Desktop..."
