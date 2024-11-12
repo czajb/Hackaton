@@ -26,5 +26,5 @@ documentation:
     - name: powershell
       description: run script
       parameters:
-        command: "./script.ps1"
+        command: "./docker-install.ps1"
         workingDirectory: C:\\provisioning\\temp
